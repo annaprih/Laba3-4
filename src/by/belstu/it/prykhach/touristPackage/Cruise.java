@@ -18,6 +18,7 @@ public class Cruise extends TouristPackage {
         transports.add(Transport.Rain);
         transports.add(Transport.Air);
         numberOfDays = 15;
+
     }
 
     @Override

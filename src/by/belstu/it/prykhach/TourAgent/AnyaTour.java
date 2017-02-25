@@ -1,5 +1,6 @@
 package by.belstu.it.prykhach.TourAgent;
 
+import by.belstu.it.prykhach.Agents;
 import by.belstu.it.prykhach.touristPackage.*;
 
 import java.util.Scanner;
@@ -134,5 +135,26 @@ public class  AnyaTour implements ITourAgent {
         }
         else throw new Exception("Путевок по заданным параметрам не найдено!");
 
+    }
+
+    public Agents agents = new Agents();
+
+    public TouristPackage chooseTour_1 () throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите тип транспорта");
+        Transport trans = Transport.valueOf(scanner.next());
+        System.out.println("Введите тип питания");
+        String foodR = scanner.next();
+        System.out.println("Введите кол-во дней");
+        int days = scanner.nextInt();
+
+        for (TouristPackage array: agents.arrayList) {
+            if ((array.getTransports().contains(trans))&&
+                    ( array.getTypeOfFood().equals(foodR)) &&(array.getNumberOfDays()== days)){
+                log1.info("Найдена путевка" + array);
+                return array;
+            }
+        }
+        throw new Exception("Путевок по заданным параметрам не найдено!");
     }
 }

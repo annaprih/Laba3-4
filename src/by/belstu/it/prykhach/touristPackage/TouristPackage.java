@@ -18,6 +18,14 @@ abstract public class TouristPackage {
         return nameTourPack;
     }
 
+    public ArrayList<Transport> getTransports() {
+        return transports;
+    }
+
+    public void setTransports(ArrayList<Transport> transports) {
+        this.transports = transports;
+    }
+
     public void setNameTourPack(String nameTourPack) {
         this.nameTourPack = nameTourPack;
     }

@@ -17,18 +17,20 @@ public class Main {
         try{
         AnyaTour anya =  AnyaTour.getAnya();
         TouristPackage cruise =  anya.cruisePackage();
-        log1.info(cruise.toString());
+        log1.info(cruise);
         TouristPackage rest =   anya.restPackage();
-        log1.info(rest.toString());
+        log1.info(rest);
         TouristPackage therapy = anya.therapyPackage();
-        log1.info(therapy.toString());
+        log1.info(therapy);
         TouristPackage shopping = anya.shoppingPackage();
-        log1.info(shopping.toString());
+        log1.info(shopping);
         TouristPackage excursion = anya.excursionPackage();
-        log1.info(excursion.toString());
+        log1.info(excursion);
 
 
         TouristPackage tour = anya.chooseTour();
+        TouristPackage tours = anya.chooseTour_1();
+
     }
     catch(Exception ex){
         log1.error(ex.getMessage());
